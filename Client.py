@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import socket as sck
 
 messaggio = input("inserisci un messaggio: ")
@@ -15,21 +14,4 @@ with sck.socket(sck.AF_INET, sck.SOCK_STREAM) as client:
     print("Risposta dal server:", risposta.decode())
 
 print("Client termintato")
-=======
-import socket as sck
 
-messaggio = input("inserisci un messaggio: ")
-
-with sck.socket(sck.AF_INET, sck.SOCK_STREAM) as client:
-    client.connect(("127.0.0.1", 5000))
-    print("Connessione stabilita")
-
-    client.sendall(messaggio.encode())
-    print("Messaggio inviato al server")
-
-    risposta = client.recv(1024)
-
-    print("Risposta dal server:", risposta.decode())
-
-print("Client termintato")
->>>>>>> 875a45a (Commit finale)
